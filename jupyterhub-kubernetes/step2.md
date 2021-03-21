@@ -6,8 +6,6 @@ Create a configuration file `config.yaml`{{open}} in the editor and add the foll
 hub:
   db:
     type: sqlite-memory
-  service:
-    type: NodePort
 #TODO-authentication
 
 proxy:
