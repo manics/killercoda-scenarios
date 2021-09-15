@@ -1,0 +1,31 @@
+{
+  "title": "Deploy BinderHub on a single Ubuntu server",
+  "description": "Deploy BinderHub on a single Ubuntu 20.04 server running Python 3 and Docker",
+  "difficulty": "Beginner",
+  "time": "60 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Deploy BinderHub",
+        "text": "step1.md",
+        "code": "setup.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hideintro": true,
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/tutorial"
+  },
+  "files": [
+  ],
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
