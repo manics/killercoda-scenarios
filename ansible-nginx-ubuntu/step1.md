@@ -9,4 +9,4 @@ Activate the miniconda environment
 `. ~/miniconda3/bin/activate`{{execute}}
 
 And install Ansible
-`conda install -y -c conda-forge ansible=3.1`{{execute}}
+`conda install -y -c conda-forge ansible=4.5`{{execute}}
