@@ -7,7 +7,7 @@ apt-get install -y build-essential curl git libcurl4-openssl-dev libssl-dev node
 
 Fetch the current version of BinderHub and example configuration
 ```
-git clone -b local-binder-local-hub https://github.com/manics/binderhub
+git clone https://github.com/jupyterhub/binderhub
 cd binderhub/testing/local-binder-local-hub
 ```{{execute}}
 
