@@ -24,9 +24,9 @@ Install BinderHub
 pip install ../..
 ```{{execute}}
 
-Since Katacoda requires a special URL to access web services we need to override the JupyterHub access URL that BinderHub returns to the user:
+Since Katacoda requires a special URL to access web services we need to override the JupyterHub access URL that BinderHub returns to the user by setting an environment variable used in the configuration files:
 ```
-sed -i.bak -r -e 's%^JUPYTERHUB_EXTERNAL_URL\s+.+%JUPYTERHUB_EXTERNAL_URL = "https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/"%' binderhub_config.py
+export JUPYTERHUB_EXTERNAL_URL="https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/"
 ```{{execute}}
 
 Take a look at the JupyterHub and BinderHub configuration files if you want: `binderhub/testing/local-binder-local-hub/jupyterhub_config.py`{{open}} `binderhub/testing/local-binder-local-hub/binderhub_config.py`{{open}}
