@@ -18,14 +18,7 @@
       "text": "finish.md"
     }
   },
-  "environment": {
-    "hideintro": true,
-    "uilayout": "editor-terminal",
-    "uieditorpath": "/root/tutorial"
-  },
-  "files": [
-  ],
   "backend": {
-    "imageid": "ubuntu:2004"
+    "imageid": "ubuntu"
   }
 }
