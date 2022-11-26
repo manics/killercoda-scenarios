@@ -1,9 +1,9 @@
 Now let's modify the Nginx configuration, and add a webpage.
 We'll use `/srv/www/` as the HTML root directory.
 
-Create a `default.conf`{{open}} Nginx configuration file.
+Create a `default.conf` Nginx configuration file.
 
-<pre class="file" data-filename="default.conf" data-target="replace">
+```
 server {
     listen       80;
     server_name  localhost;
@@ -12,12 +12,13 @@ server {
         index index.html index.htm;
     }
 }
-</pre>
 
-Now go back to `playbook.yml`{{open}}.
+```{{copy}}
+
+Now go back to `playbook.yml`.
 Create the `/var/www` directory, and overwrite the default Nginx configuration with our own file so we can serve content from this directory.
 
-<pre class="file" data-filename="playbook.yml" data-target="append">
+```
     - name: Create www directory
       file:
         path: /srv/www
@@ -30,12 +31,12 @@ Create the `/var/www` directory, and overwrite the default Nginx configuration w
       notify:
         - restart nginx
 
-</pre>
+```{{copy}}
 
 The final thing we need to do is to ensure Nginx is automatically restarted if the configuration changes.
 We can do that by defining a _handler_, and _notifying_ it only if the configuration changes.
 
-<pre class="file" data-filename="playbook.yml" data-target="append">
+```
 #TODO-add-more-tasks
 
   handlers:
@@ -45,22 +46,22 @@ We can do that by defining a _handler_, and _notifying_ it only if the configura
         name: nginx
         state: restarted
 
-</pre>
+```{{copy}}
 
 Now if we run Ansible again we should see that the Nginx configuration is updated.
 
-`ansible-playbook -i inventory.yml --diff playbook.yml`{{execute}}
+`ansible-playbook -i inventory.yml --diff playbook.yml`{{exec}}
 
 But if we run it again nothing changes
-`ansible-playbook -i inventory.yml --diff playbook.yml`{{execute}}
+`ansible-playbook -i inventory.yml --diff playbook.yml`{{exec}}
 
 Go to the webserver URL again and refresh the page (it may be cached in your browser), this time you'll see an error since there is no content in `/srv/www/`
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
 
 Finally we can add some content.
-Create an `index.html`{{open}} file.
+Create an `index.html` file.
 
-<pre class="file" data-filename="index.html" data-target="replace">
+```
 &lt;!doctype html&gt;
 &lt;html lang=en&gt;
 &lt;head&gt;
@@ -77,12 +78,13 @@ Create an `index.html`{{open}} file.
   &lt;/figure&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</pre>
 
-Update `playbook.yml`{{open}} to copy this HTML file to the web root, and to download a picture of a penguin.
+```{{copy}}
+
+Update `playbook.yml` to copy this HTML file to the web root, and to download a picture of a penguin.
 Add the following at the end of the `tasks` list, just before the `handlers` section
 
-<pre class="file" data-filename="playbook.yml" data-target="insert" data-marker="#TODO-add-more-tasks">
+```
     - name: Create index.html
       copy:
         dest: /srv/www/index.html
@@ -93,7 +95,7 @@ Add the following at the end of the `tasks` list, just before the `handlers` sec
         dest: /srv/www/penguin.jpg
         url: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Penguin_in_Antarctica_jumping_out_of_the_water.jpg/640px-Penguin_in_Antarctica_jumping_out_of_the_water.jpg
 
-</pre>
+```{{copy}}
 
-Run `ansible-playbook -i inventory.yml --diff playbook.yml`{{execute}} and check that
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com now shows your page.
+Run `ansible-playbook -i inventory.yml --diff playbook.yml`{{exec}} and check that
+{{TRAFFIC_HOST1_80}} now shows your page.

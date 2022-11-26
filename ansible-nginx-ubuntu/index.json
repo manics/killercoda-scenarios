@@ -24,20 +24,14 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "files/*", "target": "~/", "chmod": "+w"},
+      ]
     }
   },
-  "environment": {
-    "hideintro": true,
-    "uilayout": "editor-terminal",
-    "uieditorpath": "/root/tutorial"
-  },
-  "files": [
-    "defaults.conf",
-    "index.html",
-    "inventory.yml",
-    "playbook.yml"
-  ],
   "backend": {
-    "imageid": "ubuntu:2004"
+    "imageid": "ubuntu"
   }
 }
