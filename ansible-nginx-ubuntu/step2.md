@@ -10,8 +10,8 @@ webservers:
 
 ```{{copy}}
 
-If you are using the IDE terminal you must reactivate the miniconda environment.
-`. ~/miniconda3/bin/activate`{{exec}}
+Note: if you restart or switch terminal you must reactivate the mambaforge environment:
+`. ~/mambaforge/bin/activate`{{exec}}
 
 Now we can check whether the inventory works by attempting to connect using Ansible
 `ansible -i inventory.yml -m ping webservers`{{exec}}

@@ -62,22 +62,22 @@ Finally we can add some content.
 Create an `index.html` file.
 
 ```
-&lt;!doctype html&gt;
-&lt;html lang=en&gt;
-&lt;head&gt;
-  &lt;meta charset=utf-8&gt;
-  &lt;title&gt;Hello!&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;⭐⭐⭐ Ansible Rocks ⭐⭐⭐&lt;/h1&gt;
-  &lt;figure&gt;
-    &lt;img src=&quot;penguin.jpg&quot; /&gt;
-    &lt;figcaption&gt;
-      &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Penguin_in_Antarctica_jumping_out_of_the_water.jpg&quot;&gt;Christopher Michel&lt;/a&gt;, &lt;a href=&quot;https://creativecommons.org/licenses/by/2.0&quot;&gt;CC BY 2.0&lt;/a&gt;, via Wikimedia Commons
-    &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<!doctype html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  <title>Hello!</title>
+</head>
+<body>
+  <h1>⭐⭐⭐ Ansible Rocks ⭐⭐⭐</h1>
+  <figure>
+    <img src="penguin.jpg" />
+    <figcaption>
+      <a href="https://commons.wikimedia.org/wiki/File:Penguin_in_Antarctica_jumping_out_of_the_water.jpg">Christopher Michel</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons
+    </figcaption>
+  </figure>
+</body>
+</html>
 
 ```{{copy}}
 

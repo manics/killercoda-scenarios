@@ -1,12 +1,12 @@
-Download miniconda3, this is a self-contained distribution of Python
+Download Mambaforge, this is a self-contained distribution of Python based on [Conda](https://docs.conda.io/).
 
 ```
-curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh -b
+curl -LO https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
+bash Mambaforge-Linux-x86_64.sh -b
 ```{{exec}}
 
-Activate the miniconda environment
-`. ~/miniconda3/bin/activate`{{exec}}
+Activate the mambaforge environment
+`. ~/mambaforge/bin/activate`{{exec}}
 
 And install Ansible
 `conda install -y -c conda-forge ansible=6`{{exec}}

@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "title": "Install Ansible using Miniconda",
+        "title": "Install Ansible using Mambaforge",
         "text": "step1.md",
         "code": "setup.sh"
       },
@@ -33,5 +33,8 @@
   },
   "backend": {
     "imageid": "ubuntu"
+  },
+  "interface": {
+    "layout": "ide"
   }
 }
