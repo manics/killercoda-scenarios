@@ -56,7 +56,7 @@ But if we run it again nothing changes
 `ansible-playbook -i inventory.yml --diff playbook.yml`{{exec}}
 
 Go to the webserver URL again and refresh the page (it may be cached in your browser), this time you'll see an error since there is no content in `/srv/www/`
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
+{{TRAFFIC_HOST1_80}}
 
 Finally we can add some content.
 Create an `index.html` file.

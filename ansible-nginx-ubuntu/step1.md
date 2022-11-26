@@ -9,4 +9,4 @@ Activate the mambaforge environment
 `. ~/mambaforge/bin/activate`{{exec}}
 
 And install Ansible
-`conda install -y -c conda-forge ansible=6`{{exec}}
+`mamba install -y -c conda-forge ansible=6`{{exec}}
