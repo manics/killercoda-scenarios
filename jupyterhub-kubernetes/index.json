@@ -24,16 +24,17 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "~/", "chmod": "+w"}
+      ]
     }
   },
-  "environment": {
-    "uilayout": "editor-terminal",
-    "uieditorpath": "/root/tutorial"
-  },
-  "files": [
-    "config.yaml"
-  ],
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.18"
+    "imageid": "kubernetes-kubeadm-1node"
+  },
+  "interface": {
+    "layout": "ide"
   }
 }
