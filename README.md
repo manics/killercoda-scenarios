@@ -1,5 +1,7 @@
-# Katacoda Scenarios
+# Killercoda Scenarios
 [![Launch courses](https://img.shields.io/badge/Killercoda-launch_courses-%234183c4)](https://killercoda.com/manics/)
+
+~~Katacoda~~ Killercoda Scenarios
 
 - [Deploy Nginx with Ansible](https://killercoda.com/manics/scenario/ansible-nginx-ubuntu)
 - [Deploy JupyterHub on Kubernetes](https://killercoda.com/manics/scenario/jupyterhub-kubernetes)
