@@ -22,7 +22,7 @@ singleuser:
 
 Add the JupyterHub helm chart repository to the list of repositories Helm knows about
 ```
-helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
+helm repo add jupyterhub https://hub.jupyter.org/helm-chart/
 helm repo update
 ```{{exec}}
 
@@ -33,7 +33,7 @@ helm upgrade --cleanup-on-fail \
   --install my-jupyterhub jupyterhub/jupyterhub \
   --namespace jhub \
   --create-namespace \
-  --version 2.0.0 \
+  --version 3.2.1 \
   --values config.yaml \
   --wait
 ```{{exec}}
@@ -41,4 +41,4 @@ helm upgrade --cleanup-on-fail \
 You should now see JupyterHub at
 {{TRAFFIC_HOST1_31080}}
 
-JupyterHub defaults to using the [DummyAuthenticator](https://jupyterhub.readthedocs.io/en/3.0.0/reference/authenticators.html#the-dummy-authenticator), so you can enter _any_ username and password.
+JupyterHub defaults to using the [DummyAuthenticator](https://jupyterhub.readthedocs.io/en/4.0.2/reference/authenticators.html#the-dummy-authenticator), so you can enter _any_ username and password.

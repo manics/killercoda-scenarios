@@ -27,10 +27,9 @@ helm upgrade --cleanup-on-fail \
   --install my-jupyterhub jupyterhub/jupyterhub \
   --namespace jhub \
   --create-namespace \
-  --version 1.1.3 \
+  --version 3.2.1 \
   --values config.yaml \
   --wait
 ```{{execute}}
 
-Go to https://[[HOST_SUBDOMAIN]]-31080-[[KATACODA_HOST]].environments.katacoda.com,
-create an account, and login.
+Go to {{TRAFFIC_HOST1_31080}}, create an account, and login.
