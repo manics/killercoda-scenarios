@@ -1,4 +1,5 @@
 # Killercoda Scenarios
+
 [![Launch courses](https://img.shields.io/badge/Killercoda-launch_courses-%234183c4)](https://killercoda.com/manics/)
 
 ~~Katacoda~~ Killercoda Scenarios

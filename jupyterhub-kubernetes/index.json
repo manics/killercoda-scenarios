@@ -26,9 +26,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [
-        {"file": "*", "target": "~/", "chmod": "+w"}
-      ]
+      "host01": [{ "file": "*", "target": "~/", "chmod": "+w" }]
     }
   },
   "backend": {
