@@ -5,7 +5,7 @@ cat /etc/issue.net
 
 Install some operating system dependencies including Python 3 and git (may already be installed).
 ```
-sudo apt install python3 python3-dev git curl
+sudo apt install -y python3 python3-dev git curl
 ```{{exec}}
 
 Pick a username for your TLJH administrator, e.g. `admin`, and run the installation script:
