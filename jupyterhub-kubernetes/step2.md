@@ -33,7 +33,7 @@ helm upgrade --cleanup-on-fail \
   --install my-jupyterhub jupyterhub/jupyterhub \
   --namespace jhub \
   --create-namespace \
-  --version 3.3.8 \
+  --version 4.1.0 \
   --values config.yaml \
   --wait
 ```{{exec}}
