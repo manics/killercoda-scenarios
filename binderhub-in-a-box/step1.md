@@ -2,7 +2,15 @@ Install some operating system dependencies including Python 3, Nodejs and librar
 
 ```
 apt-get update -y
-apt-get install -y build-essential curl git libcurl4-openssl-dev libssl-dev nodejs npm python3-venv
+apt-get install -y build-essential curl git libcurl4-openssl-dev libssl-dev software-properties-common
+```{{exec}}
+
+The Ubuntu 20.04 versions of NodeJS and Python are too old
+```
+curl -sL https://deb.nodesource.com/setup_22.x | bash
+add-apt-repository -y ppa:deadsnakes/ppa
+apt-get update -y
+apt-get install -y nodejs python3.12 python3.12-venv
 ```{{exec}}
 
 Fetch the current version of BinderHub and example configuration
@@ -13,7 +21,7 @@ cd binderhub/testing/local-binder-local-hub
 
 Create a virtualenv and install dependencies
 ```
-python3 -mvenv venv
+python3.12 -mvenv venv
 . venv/bin/activate
 npm install -g configurable-http-proxy
 pip install -r requirements.txt
