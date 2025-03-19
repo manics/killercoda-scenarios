@@ -19,6 +19,6 @@
     }
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "ubuntu-rapid"
   }
 }
