@@ -26,13 +26,11 @@ helm repo add jupyterhub https://hub.jupyter.org/helm-chart/
 helm repo update
 ```{{exec}}
 
-Now run `helm upgrade` to install JupyterHub.
+Now run `helm upgrade` to install JupyterHub into the default namespace.
 The `upgrade` command will install JupyterHub if it's not present, or upgrade it if it is.
 ```
 helm upgrade --cleanup-on-fail \
   --install my-jupyterhub jupyterhub/jupyterhub \
-  --namespace jhub \
-  --create-namespace \
   --version 4.1.0 \
   --values config.yaml \
   --wait
@@ -42,3 +40,5 @@ You should now see JupyterHub at
 {{TRAFFIC_HOST1_31080}}
 
 JupyterHub defaults to using the [DummyAuthenticator](https://jupyterhub.readthedocs.io/en/4.0.2/reference/authenticators.html#the-dummy-authenticator), so you can enter _any_ username and password.
+
+You can install JupyterHub into a different namespace such as `jhub` by passing these arguments to helm: `--namespace jhub --create-namespace`.

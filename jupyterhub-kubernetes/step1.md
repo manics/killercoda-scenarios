@@ -6,7 +6,7 @@ kubectl get nodes
 You should see something like
 ```
 NAME           STATUS   ROLES           AGE   VERSION
-controlplane   Ready    control-plane   1d    v1.25.3
+controlplane   Ready    control-plane   14d   v1.32.1
 ```
 Install Helm 3 by running the installation script
 `curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash`{{exec}}
